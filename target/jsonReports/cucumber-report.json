@@ -1,0 +1,139 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-20T18:29:19.588Z",
+        "line": 4,
+        "name": "Verify if user is able to add a produt to add to cart",
+        "description": "",
+        "id": "verify-add-to-cart-feature;verify-if-user-is-able-to-add-a-produt-to-add-to-cart",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36938000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on Amazon website",
+            "match": {
+              "location": "stepDefinitions.AmazonStepDefinition.user_is_on_Amazon_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8291000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters delivery zip code",
+            "match": {
+              "location": "stepDefinitions.AmazonStepDefinition.user_enters_delivery_zip_code()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19749000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user search for \"Apple iPhone 11 pro max\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Apple iPhone 11 pro max\"",
+                  "offset": 16
+                }
+              ],
+              "location": "stepDefinitions.AmazonStepDefinition.user_search_for(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user verifies results as \"White\" or \"Midnight green\" on page 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"White\"",
+                  "offset": 25
+                },
+                {
+                  "val": "\"Midnight green\"",
+                  "offset": 36
+                },
+                {
+                  "val": "1",
+                  "offset": 61
+                }
+              ],
+              "location": "stepDefinitions.AmazonStepDefinition.user_verifies_results_as_or_on_page(java.lang.String,java.lang.String,java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28034000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user selects \"Midnight Green\" and moves to the product details page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Midnight Green",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.AmazonStepDefinition.user_selects_something_and_moves_to_the_product_details_page(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1015000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user add product to the cart",
+            "match": {
+              "location": "stepDefinitions.AmazonStepDefinition.user_add_product_to_the_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4912000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "users ignores suggestions and proceed to cart",
+            "match": {
+              "location": "stepDefinitions.AmazonStepDefinition.users_ignores_suggestions_and_proceed_to_cart()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddToCartTest"
+          }
+        ]
+      }
+    ],
+    "name": "Verify add to cart feature",
+    "description": "",
+    "id": "verify-add-to-cart-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/addToCart.feature",
+    "tags": []
+  }
+]
